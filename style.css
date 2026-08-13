@@ -34,20 +34,27 @@ header {
 }
 
 nav {
-    width: min(90%, 1200px);
+    width: 94%;
     min-height: 72px;
     margin: auto;
     padding: 14px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
 }
 
 .logo{
     font-size:30px;
     color:white;
     font-weight:700;
+}
+
+.logo {
+    margin-left: -20px;
+}
+
+.logo {
+    margin-left: -30px;
 }
 
 .logo span{
@@ -286,39 +293,152 @@ nav ul li a:hover {
     flex-wrap:wrap;
     margin-top:30px;
 }
-.btn{
+.view-work-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
 
-background:#00BCD4;
+    padding: 15px 30px;
+    min-width: 190px;
 
-color:white;
+    border-radius: 12px;
+    text-decoration: none;
 
-border:none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
 
-font-weight:600;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
 
-letter-spacing:1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
+    box-shadow:
+        0 8px 25px rgba(88, 28, 135, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+    transition: all 0.3s ease;
 }
 
-.btn:hover{
-
-background:#00E5FF;
-
-transform:translateY(-6px);
-
-box-shadow:0 15px 30px rgba(0,229,255,.4);
-
+.view-work-btn span {
+    font-size: 24px;
+    line-height: 1;
+    transition: transform 0.3s ease;
 }
 
-.btn-outline {
-    background: transparent;
-    border: 2px solid white;
+.view-work-btn:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+
+    box-shadow:
+        0 14px 35px rgba(88, 28, 135, 0.5),
+        0 0 20px rgba(99, 102, 241, 0.25);
+}
+
+.view-work-btn:hover span {
+    transform: translateX(6px);
+}
+
+.view-work-btn:active {
+    transform: translateY(-1px);
+}
+
+/* =======================
+   Download CV Button
+======================= */
+
+.download-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 15px 30px;
+    min-width: 190px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.8);
+
+    background: rgba(255, 255, 255, 0.04);
+    color: white;
+
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25),
+        inset 0 0 15px rgba(124, 58, 237, 0.08);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+}
+
+/* Download icon */
+.download-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.download-cv-btn:hover {
+    transform: translateY(-4px);
+
+    border-color: #8b5cf6;
+
+    background: rgba(124, 58, 237, 0.15);
+
+    box-shadow:
+        0 12px 30px rgba(88, 28, 135, 0.4),
+        0 0 20px rgba(99, 102, 241, 0.2);
+
     color: white;
 }
 
-.btn-outline:hover {
-    background: white;
-    color: #0b666a;
+/* Move icon on hover */
+.download-cv-btn:hover .download-icon {
+    transform: translateY(4px);
+}
+
+/* Click effect */
+.download-cv-btn:active {
+    transform: translateY(-1px);
+}
+@media (max-width: 600px) {
+
+    .view-work-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .download-cv-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
 }
 
 /* =======================
